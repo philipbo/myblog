@@ -53,7 +53,7 @@ s := [...]string{"a", "b"}
 
 ### 内部结构：
 
-![go-array-slices-array.png](/images/posts/go-array-slices-array.png)
+![go-array-slices-array.png](/img/posts/go-array-slices-array.png)
 
 ### 总结:
 
@@ -143,13 +143,13 @@ func slice1=[1 -1 -2 -3 -4 2 3 4]
 ### 内部结构
 
 一个`slice`结构是一个指向数组的指针，一个长度（len）和容量（cap）字段
-![slice struct](/images/posts/go-array-slices-internals_slice-struct.png)
+![slice struct](/img/posts/go-array-slices-internals_slice-struct.png)
 
 创建 `s := make([]byte, 5)`， 结构是这样的:
-![slice struct](/images/posts/go-array-slices-internals_slice-1.png)
+![slice struct](/img/posts/go-array-slices-internals_slice-1.png)
 
 使用切片`s = s[2:4]`， 结构是这样的:
-![slice struct](/images/posts/go-array-slices-internals_slice-2.png)
+![slice struct](/img/posts/go-array-slices-internals_slice-2.png)
 Slicing不会复制数据。只是创建了一个新的切片值，指向原始数组。新切片的操作对原始数组有效。也就是说修改了切片的值，同样修改了之前的数组的值(英文水平有限:P)，上例子:
 ```go
 fmt.Println("修改前")
